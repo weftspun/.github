@@ -3,14 +3,13 @@
   "domain": "plans/weftspun-build.domain.jsonld",
   "note": "essential-tuple-lake is DONE (pattern-setter). Everything else depends on the lake. phenotype needs render (rf-detr runs on renders); oracle needs the features (ingest + embedder + slat). ingest/embedder/render/slat have no cross-deps and can be built in any order / in parallel.",
   "ordered_plan": [
-    {"action": "a_ingest",    "repo": "corpus-relation-ingest", "platform": "elixir",  "hours": 1.0},
     {"action": "a_embedder",  "repo": "unified-modal-embedder", "platform": "pythonx", "hours": 2.0},
     {"action": "a_render",    "repo": "headless-viser-render",  "platform": "pythonx", "hours": 2.0},
     {"action": "a_slat",      "repo": "voxel-slat-encoder",     "platform": "pythonx", "hours": 2.0},
     {"action": "a_phenotype", "repo": "pose-anny-phenotype",    "platform": "fine",    "hours": 3.0},
     {"action": "a_oracle",    "repo": "semantic-code-oracle",   "platform": "pythonx", "hours": 3.0}
   ],
-  "done": ["a_lake (essential-tuple-lake)"],
+  "done": ["a_lake (essential-tuple-lake)", "a_ingest (corpus-relation-ingest)"],
   "critical_path_hours": 7.0,
   "sequential_hours": 13.0
 }

@@ -6,7 +6,7 @@
   "variables": [
     {"name": "done", "init": {
       "lake": true,
-      "ingest": false,
+      "ingest": true,
       "embedder": false,
       "render": false,
       "slat": false,
