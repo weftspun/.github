@@ -1,15 +1,18 @@
 {
-  "generated_by": "HAND-COMPUTED PLACEHOLDER — the taskweft MCP server is disconnected. Regenerate from a real `mcp__taskweft__plan` call over weftspun-build.domain.jsonld once the server is reconnected.",
+  "generated_by": "mcp__taskweft__plan (real HTN solve, taskweft-nif phase-3) over weftspun-build.domain.jsonld; done/* = lake+ingest",
   "domain": "plans/weftspun-build.domain.jsonld",
-  "note": "essential-tuple-lake is DONE (pattern-setter). Everything else depends on the lake. phenotype needs render (rf-detr runs on renders); oracle needs the features (ingest + embedder + slat). ingest/embedder/render/slat have no cross-deps and can be built in any order / in parallel.",
-  "ordered_plan": [
-    {"action": "a_embedder",  "repo": "unified-modal-embedder", "platform": "pythonx", "hours": 2.0},
-    {"action": "a_render",    "repo": "headless-viser-render",  "platform": "pythonx", "hours": 2.0},
-    {"action": "a_slat",      "repo": "voxel-slat-encoder",     "platform": "pythonx", "hours": 2.0},
-    {"action": "a_phenotype", "repo": "pose-anny-phenotype",    "platform": "fine",    "hours": 3.0},
-    {"action": "a_oracle",    "repo": "semantic-code-oracle",   "platform": "pythonx", "hours": 3.0}
-  ],
-  "done": ["a_lake (essential-tuple-lake)", "a_ingest (corpus-relation-ingest)"],
-  "critical_path_hours": 7.0,
-  "sequential_hours": 13.0
+  "plan": [["a_embedder"], ["a_render"], ["a_slat"], ["a_phenotype"], ["a_oracle"]],
+  "temporal": {
+    "consistent": true,
+    "origin": "PT0S",
+    "total": "PT12H",
+    "steps": [
+      {"action": "a_embedder",  "duration": "PT2H", "start": "PT0S", "end": "PT2H"},
+      {"action": "a_render",    "duration": "PT2H", "start": "PT2H", "end": "PT4H"},
+      {"action": "a_slat",      "duration": "PT2H", "start": "PT4H", "end": "PT6H"},
+      {"action": "a_phenotype", "duration": "PT3H", "start": "PT6H", "end": "PT9H"},
+      {"action": "a_oracle",    "duration": "PT3H", "start": "PT9H", "end": "PT12H"}
+    ]
+  },
+  "done": ["a_lake (essential-tuple-lake)", "a_ingest (corpus-relation-ingest)"]
 }
