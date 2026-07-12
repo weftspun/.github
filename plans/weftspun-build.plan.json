@@ -1,5 +1,5 @@
 {
-  "generated_by": "taskweft plan (HTN solve) over weftspun-build.domain.jsonld",
+  "generated_by": "HAND-COMPUTED PLACEHOLDER — the taskweft MCP server is disconnected. Regenerate from a real `mcp__taskweft__plan` call over weftspun-build.domain.jsonld once the server is reconnected.",
   "domain": "plans/weftspun-build.domain.jsonld",
   "note": "essential-tuple-lake is DONE (pattern-setter). Everything else depends on the lake. phenotype needs render (rf-detr runs on renders); oracle needs the features (ingest + embedder + slat). ingest/embedder/render/slat have no cross-deps and can be built in any order / in parallel.",
   "ordered_plan": [
