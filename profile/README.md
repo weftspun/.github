@@ -1,12 +1,16 @@
 # weftspun
 
-> *Content spun into semantic-ID code-thread, woven as weft into recommendations.*
+**A recommendation engine for user-made 3D worlds** — it suggests the avatars, maps, and props a
+creator is likely to want next.
 
-A FOSS, content-addressable **semantic-ID recommender** for user-generated Godot worlds
-(avatars · maps · props). Allocentric and item-centric — new assets are recommendable the
-moment they exist (no cold start), because identity is derived from content, not an opaque ID.
+Most recommenders need lots of click history before they can suggest anything, so brand-new
+creations get ignored. weftspun instead reads an item's actual **content** — its 3D shape, textures,
+images, and text — so a freshly-made asset can be recommended the moment it exists.
 
-Built as small **hexagonal** (`core`/`ports`/`adapters`) **Elixir + Burrito** binaries. ML via
-**Pythonx**, native Lean/C via **Fine**, meeting at `.sigs` ports. Sink → source.
+It's built as small, independent **Elixir** programs, each shipped as a single self-contained binary
+that hands its results to the next — easy to run, swap, or scale on their own.
 
-FOSS only — Apache-2.0 / MIT code, CC-BY / CC0 data.
+*The name:* content is **spun** into a compact code, and those codes are **woven** into suggestions —
+like threads on a loom.
+
+Open source (Apache-2.0 / MIT) · built for V-Sekai.
